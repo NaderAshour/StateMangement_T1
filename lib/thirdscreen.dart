@@ -27,7 +27,18 @@ class ThirdScreen extends StatelessWidget {
 
             IconButton(onPressed: (){
               Provider.of<Myinfo>(context,listen: false).increment();
-            }, icon: Icon(Icons.add))
+            }, icon: Icon(Icons.add)),
+            Container(
+              width: 200,
+              height: 200,
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                image: DecorationImage(fit: BoxFit.fill,image:AssetImage('${Provider.of<Myinfo>(context).imageurl}',))
+
+              ),
+
+
+            )
           ],
         ),
       ),
